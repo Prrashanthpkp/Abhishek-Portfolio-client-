@@ -95,7 +95,7 @@ const About = () => {
             marginBottom: '20px',
           }}>
             I'm an <span style={{ color: 'var(--amber)', fontWeight: 600 }}>
-            AI & Data Science engineer</span> based in Bangalore,
+            AI & Data Science engineer</span> based in Chennai,
             passionate about building systems that actually think —
             from NL2SQL engines to RAG-powered chatbots deployed on
             the cloud.
