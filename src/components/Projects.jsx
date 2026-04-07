@@ -14,7 +14,7 @@ const projects = [
   {
     number:  '01',
     title:   'AI-Powered Chatbot for Agricultural Pricing',
-    summary: 'A Telegram chatbot delivering real-time crop prices and farming insights using RAG and NLP pipelines.',
+    summary: 'Built a Telegram chatbot using RAG, NLP, FAISS, and LangChain to provide real-time crop prices and farming insights.',
     description: 'Built a production RAG pipeline using LangChain and FAISS vector store to retrieve live crop pricing data. Integrated with Telegram Bot API for accessible, conversational querying by farmers.',
     tags:    ['Python', 'RAG', 'LangChain', 'FAISS', 'NLP', 'Telegram API'],
     size:    'large',
@@ -23,8 +23,8 @@ const projects = [
   },
   {
     number:  '02',
-    title:   'Automatic Ambulance Recognition System',
-    summary: '~91% mAP YOLO model for real-time ambulance detection in CCTV footage to prioritise traffic.',
+    title:   'Automatic Ambulance Recognition System using Image Processing',
+    summary: 'YOLO-based object detection system to identify ambulances in real-time CCTV footage for traffic prioritisation.',
     description: 'Used Roboflow for dataset annotation and YOLOv8 for training. Integrated with OpenCV for live video stream processing and traffic signal control logic.',
     tags:    ['Python', 'YOLO', 'OpenCV', 'Roboflow', 'Computer Vision'],
     size:    'medium',
@@ -34,7 +34,7 @@ const projects = [
   {
     number:  '03',
     title:   'Power BI Sales Dashboard',
-    summary: 'Interactive sales dashboard that cut reporting time by 40% with DAX-driven insights.',
+    summary: 'Created an interactive sales dashboard using Power BI with data cleaning, transformation, and DAX-based insights.',
     description: 'End-to-end BI solution with Power Query for data cleaning, DAX measures for KPIs, and an interactive dashboard with drill-through and slicers.',
     tags:    ['Power BI', 'DAX', 'Power Query', 'Excel', 'Data Viz'],
     size:    'medium',
@@ -43,8 +43,8 @@ const projects = [
   },
   {
     number:  '04',
-    title:   'Hand Gesture Sketch-to-Image',
-    summary: 'Draw with your hands — CVZone gesture detection feeds into Stable Diffusion for image generation.',
+    title:   'Hand Gesture Sketch-to-Image Translation',
+    summary: 'Developed a Streamlit application using CVZone and Stable Diffusion AI for gesture-based sketch-to-image generation.',
     description: 'Real-time hand tracking via CVZone and MediaPipe translates gestures into canvas sketches, which are then processed by a Stable Diffusion pipeline to generate matching images via Streamlit.',
     tags:    ['Python', 'Streamlit', 'CVZone', 'Stable Diffusion', 'MediaPipe'],
     size:    'large',

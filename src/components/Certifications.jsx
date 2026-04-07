@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaMedal, FaExternalLinkAlt, FaBuilding } from 'react-icons/fa'; // ✅ added FaBuilding
+import { FaMedal, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiCoursera, SiUdemy } from 'react-icons/si'; // ❌ removed SiIbm
 import { HiAcademicCap } from 'react-icons/hi';
 
@@ -15,34 +15,39 @@ const certs = [
   {
     title:    'Python for Data Science',
     issuer:   'IBM',
-    icon:     <FaBuilding size={22} />, // ✅ fixed
+    link:     'https://www.credly.com/badges/b1baeb52-a79a-453e-a04e-d5e35d0d8859/linked_in_profile',
+    icon:     <SiCoursera size={22} />,
     color:    '#f97316',
     category: 'Data Science',
   },
   {
     title:    'Data Analysis with Python',
     issuer:   'IBM',
-    icon:     <FaBuilding size={22} />, // ✅ fixed
+    link:     'https://www.coursera.org/account/accomplishments/verify/6ZUMXZSZ6LNZ',
+    icon:     <SiCoursera size={22} />,
     color:    '#f97316',
     category: 'Data Science',
   },
   {
     title:    'Data Visualization with Python',
     issuer:   'IBM',
-    icon:     <FaBuilding size={22} />, // ✅ fixed
+    link:     'https://www.coursera.org/account/accomplishments/verify/NS2EMYKNC9T2',
+    icon:     <SiCoursera size={22} />,
     color:    '#fbbf24',
     category: 'Data Science',
   },
   {
     title:    'Machine Learning with Python',
     issuer:   'IBM',
-    icon:     <FaBuilding size={22} />, // ✅ fixed
+    link:     'https://www.coursera.org/account/accomplishments/verify/4E4B3DSY2Y97',
+    icon:     <SiCoursera size={22} />,
     color:    '#fbbf24',
     category: 'ML / AI',
   },
   {
     title:    'Complete SQL Course 2025',
     issuer:   'Udemy',
+    link:     'https://www.udemy.com/certificate/UC-cae46900-6ec6-4d68-831e-5e6e0c21271c/',
     icon:     <SiUdemy size={22} />,
     color:    '#fb923c',
     category: 'Database',
@@ -50,6 +55,7 @@ const certs = [
   {
     title:    'Cybersecurity for Everyone',
     issuer:   'Coursera',
+    link:     'https://www.coursera.org/account/accomplishments/verify/4L3JGB6MRBET',
     icon:     <SiCoursera size={22} />,
     color:    '#fb923c',
     category: 'Security',
@@ -57,6 +63,7 @@ const certs = [
   {
     title:    'Red Hat System Administration I',
     issuer:   'Red Hat Academy',
+    link:     'https://drive.google.com/file/d/1dS5u4PzJghU0hw9NyghKoqI_JqaZCD9D/view?usp=sharing',
     icon:     <HiAcademicCap size={22} />,
     color:    '#f97316',
     category: 'DevOps',
@@ -64,6 +71,7 @@ const certs = [
   {
     title:    'Industry 4.0 & IIoT',
     issuer:   'NPTEL',
+    link:     'https://drive.google.com/file/d/1EtYgyrENSXntYKupAP4Zz2c1vQp7zxSo/view?usp=sharing',
     icon:     <FaMedal size={22} />,
     color:    '#fbbf24',
     category: 'IoT',
@@ -152,19 +160,38 @@ const CertCard = ({ cert, delay }) => {
       </div>
 
       {/* Bottom */}
-      <div style={{
-        display:        'flex',
-        justifyContent: 'space-between',
-        alignItems:     'center',
-        paddingTop:     '12px',
-        borderTop:      '1px solid var(--border)',
-      }}>
-        <span style={{ fontSize: '0.72rem', color: 'var(--muted2)' }}>
-          Verified
-        </span>
-
-        <FaExternalLinkAlt size={12} />
-      </div>
+      {cert.link ? (
+        <a href={cert.link} target="_blank" rel="noopener noreferrer" style={{
+          display:        'flex',
+          justifyContent: 'space-between',
+          alignItems:     'center',
+          paddingTop:     '12px',
+          borderTop:      '1px solid var(--border)',
+          textDecoration: 'none',
+          transition:     'opacity 0.2s',
+        }}
+        onMouseEnter={e => e.currentTarget.style.opacity = 0.7}
+        onMouseLeave={e => e.currentTarget.style.opacity = 1}
+        >
+          <span style={{ fontSize: '0.72rem', color: 'var(--muted)', fontWeight: 600 }}>
+            View Certificate
+          </span>
+          <FaExternalLinkAlt size={12} style={{ color: cert.color }} />
+        </a>
+      ) : (
+        <div style={{
+          display:        'flex',
+          justifyContent: 'space-between',
+          alignItems:     'center',
+          paddingTop:     '12px',
+          borderTop:      '1px solid var(--border)',
+        }}>
+          <span style={{ fontSize: '0.72rem', color: 'var(--muted2)' }}>
+            Verified
+          </span>
+          <FaExternalLinkAlt size={12} style={{ opacity: 0.3 }} />
+        </div>
+      )}
     </motion.div>
   );
 };

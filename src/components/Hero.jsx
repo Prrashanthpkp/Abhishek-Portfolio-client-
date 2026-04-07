@@ -142,8 +142,7 @@ const Hero = () => {
           maxWidth:   '420px',
           lineHeight: 1.6,
         }}>
-          Turning complex data into real-world AI solutions
-          with LLMs, RAG pipelines and cloud deployments.
+          Building AI systems that think — from RAG pipelines to cloud-deployed LLMs, turning complex problems into products people actually use.
         </span>
       </motion.div>
 
@@ -164,6 +163,9 @@ const Hero = () => {
             Get In Touch
           </button>
         </Link>
+        <a href="/ABHISHEK_Res01.pdf" download className="btn-outline">
+          Download Resume
+        </a>
       </motion.div>
 
       {/* Bento mini cards row */}

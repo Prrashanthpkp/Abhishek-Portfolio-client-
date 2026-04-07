@@ -48,6 +48,15 @@
               height 0.2s ease, border-color 0.2s ease;
 }
 
+@media (max-width: 1024px) {
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
+  *, *::before, *::after {
+    cursor: auto !important;
+  }
+}
+
 /* ── Base ── */
 html { scroll-behavior: smooth; }
 
