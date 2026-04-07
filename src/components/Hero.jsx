@@ -3,7 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
-import { HiMail, HiArrowRight } from 'react-icons/hi';
 
 const Hero = () => {
   const gridRef = useRef(null);
